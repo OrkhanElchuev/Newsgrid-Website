@@ -144,13 +144,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* Padding Classes */
-.py-1 { padding: 1.5rem 0 }
+.py-1 { padding: 1.5rem 0 } /* Padding Classes */
 .py-2 { padding: 2rem 0 }
 .py-3 { padding: 3rem 0 }
 .p-1 { padding: 1.5rem }
 .p-2 { padding: 2rem }
 .p-3 { padding: 3rem }
+
+.l-heading {
+  font-size: 3rem;
+}
 
 .list li {
   padding: .5rem 0;
@@ -160,6 +163,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .list li a:hover {
   color: var(--primary-color) !important;
+}
+
+/* Inner page grid container */
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  gap: 1.5rem;
+}
+
+.page-container > *:first-child {
+  grid-row: 1 / span 3;
 }
 
 /* Navigation */
@@ -270,6 +285,18 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 2 / span 2;
 }
 
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 0.5rem;
+}
+
+#article .meta .category {
+  margin-top: 0.5rem;
+}
+
 /* Footer */
 #main-footer {
   background: var(--dark-color);
@@ -306,4 +333,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-footer .footer-container input[type='submit'] {
   width: 90%;
+}
+
+/* About page */
+#about .page-container p {
+  font-size: 1.2rem;
 }
